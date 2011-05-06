@@ -1,0 +1,22 @@
+﻿
+Message format: 
+
+Each message should contain/begin with:
+client_id<eoln>
+message_head<eoln>
+message_body<eoln><eoln>
+
+What should a simulation module contain? 
+  - a weather model
+  - a map loader/generator
+  - tile definitions for the map
+  - entity definitions - the user agent and (optionally) the simulated agents present in the environment
+
+Dynamic dispatch
+        /// <summary>
+        /// An object that handles dynamically dispatched calls used in 
+        /// simulation communication, if any is provided.
+        /// </summary>
+        public readonly object DispatchMediator = defaultMediator;
+	Throws at runtime if the method called on it is missing. Check for it!
+	

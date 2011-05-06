@@ -1,0 +1,35 @@
+﻿<Window x:Class="ManualClientConsole.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="A client for manual agent control" Height="521" Width="1099">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="581*" />
+            <ColumnDefinition Width="0*" />
+        </Grid.ColumnDefinitions>
+        <ComboBox Height="23" HorizontalAlignment="Left" Margin="12,431,0,0" Name="cbCommand" VerticalAlignment="Top" Width="120" ToolTip="Pick a command" ClipToBounds="False" />
+        <TextBox Height="23" HorizontalAlignment="Left" Margin="12,12,0,0" Name="tbIP" VerticalAlignment="Top" Width="120" Text="127.0.0.1" ToolTip="Server IP address" />
+        <TextBox Height="23" HorizontalAlignment="Left" Margin="138,12,0,0" Name="tbPort" VerticalAlignment="Top" Width="63" Text="Port" />
+        <Button Content="Connect" Height="23" HorizontalAlignment="Left" Margin="207,12,0,0" Name="btnConnect" VerticalAlignment="Top" Width="75" Click="button1_Click" />
+        <TextBox Height="23" HorizontalAlignment="Left" Margin="138,431,0,0" Name="tbArg1" VerticalAlignment="Top" Width="63" Text="Arg 1" ToolTip="First argument" ClipToBounds="False" />
+        <TextBox Height="23" HorizontalAlignment="Left" Margin="207,431,0,0" Name="tbArg2" Text="Arg 2" VerticalAlignment="Top" Width="63" ToolTip="Second argument" ClipToBounds="False" />
+        <Button Content="Execute" Height="23" HorizontalAlignment="Left" Margin="276,431,0,0" Name="btnExecute" VerticalAlignment="Top" Width="75" Click="button2_Click" ClipToBounds="False" />
+        <TabControl Height="368" HorizontalAlignment="Left" Margin="12,57,0,0" Name="tabControl1" VerticalAlignment="Top" Width="339">
+            <TabItem Header="Log" Name="tabItem1">
+                <Grid>
+                    <TextBox Height="336" HorizontalAlignment="Left" Name="tbLog" VerticalAlignment="Top" Width="329" VerticalScrollBarVisibility="Auto" />
+                </Grid>
+            </TabItem>
+            <TabItem Header="Trace" Name="tabItem2">
+                <Grid>
+                    <TextBlock Height="336" HorizontalAlignment="Left" Name="tbTrace" Text="" VerticalAlignment="Top" Width="329" />
+                </Grid>
+            </TabItem>
+        </TabControl>
+        <TreeView Height="336" HorizontalAlignment="Left" Margin="380,84,0,0" Name="tvEntities" VerticalAlignment="Top" Width="415"></TreeView>
+        <Label Content="Perceived entities" Height="28" HorizontalAlignment="Left" Margin="380,57,0,0" Name="label1" VerticalAlignment="Top" />
+        <Label Content="Actions being performed" Height="28" HorizontalAlignment="Left" Margin="801,57,0,0" Name="label2" VerticalAlignment="Top" />
+        <TextBox Height="336" HorizontalAlignment="Left" Margin="801,84,0,0" Name="tbOngoingActions" VerticalAlignment="Top" Width="264" IsReadOnly="True" TextWrapping="Wrap" />
+        <CheckBox Content="Clear after each perception" Height="16" HorizontalAlignment="Left" Margin="380,434,0,0" Name="cbClearWindow" VerticalAlignment="Top" IsChecked="True" />
+    </Grid>
+</Window>

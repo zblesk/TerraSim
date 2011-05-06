@@ -1,0 +1,12 @@
+[
+  {
+    "type": "clean",
+    "lighting_reduction": 0,
+	"speedcap": 0,
+  },
+  {
+    "type": "wall",
+    "lighting_reduction": 0,
+	"speedcap": 0,
+  }
+]

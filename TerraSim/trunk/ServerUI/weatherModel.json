@@ -1,0 +1,14 @@
+[
+  { 
+	"TransitionProbabilities": [0.35, 0.25, 0.4],
+	"Name": "RISE"
+  },
+  { 
+	"TransitionProbabilities": [0.1, 0.8, 0.1],
+	"Name": "STAY"
+  },
+  { 
+	"TransitionProbabilities": [0.2, 0.1, 0.70],
+	"Name": "FALL"
+  },
+]

@@ -1,0 +1,22 @@
+﻿Agent's actions:
+
+Agent will recieve a string containing the action name. 
+If the name is a key in the dictionary, the actuator [value for the given key in the dictionary] 
+performs its action with recieved arguments.
+
+possible improvements: 
+
+ * namespacing of actuator commands - if A and B have action Do, it can be auto-disambiguated to A.Do, B.Do.
+ * In ForestWorld, 1 actuator => 1 concurrent action. Workaround possible - multiple actuators. See 'namespacing.'
+ * The message system should be reworked, so that also actuators and sensors can receive dynamic messages. 
+
+Light update cycle:
+	first, update weather
+	update light [dawn/dusk/day/night]
+	add up the parts
+
+Messaging system: 
+	No malicious intent is expected. Therefore, if you know how, you could drain a different agent's energy.
+	It could be fixed by assigning a random number to each agent that only he (and his sensors+actuators)
+	would know about, then use it to identify all messages directed at them.
+

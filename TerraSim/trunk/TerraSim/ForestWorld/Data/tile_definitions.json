@@ -1,0 +1,32 @@
+[
+  {
+    "type": "grass",
+    "lighting_reduction": 0,
+	"speedcap": 5,
+  },
+  {
+    "type": "grove",
+    "lighting_reduction": 2,
+	"speedcap": 3,
+  },
+  {
+    "type": "gravel",
+    "lighting_reduction": 1,
+	"speedcap": 4,
+  },
+  {
+    "type": "rock",
+    "lighting_reduction": 0,
+	"speedcap": 0,
+  },
+  {
+    "type": "water",
+    "lighting_reduction": 0,
+	"speedcap": 5,
+  },
+  {
+    "type": "sand",
+    "lighting_reduction": 1,
+	"speedcap": 2,
+  }
+]
