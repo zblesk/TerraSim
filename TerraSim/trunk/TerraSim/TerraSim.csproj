@@ -1,0 +1,215 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{482885D9-151E-4398-9658-B7110F2E2355}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>TerraSim</RootNamespace>
+    <AssemblyName>DiplomovaPraca</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <OldToolsVersion>3.5</OldToolsVersion>
+    <UpgradeBackupLocation />
+    <TargetFrameworkProfile>
+    </TargetFrameworkProfile>
+    <SccProjectName>Svn</SccProjectName>
+    <SccLocalPath>Svn</SccLocalPath>
+    <SccAuxPath>Svn</SccAuxPath>
+    <SccProvider>SubversionScc</SccProvider>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <TreatWarningsAsErrors>false</TreatWarningsAsErrors>
+    <CheckForOverflowUnderflow>true</CheckForOverflowUnderflow>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject />
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="Newtonsoft.Json, Version=3.5.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Xml.Linq">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data.DataSetExtensions">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="ExtensionMethods.cs" />
+    <Compile Include="ForestWorld\Actuators\AnimalDecisionCenter.cs" />
+    <Compile Include="ForestWorld\Actuators\Arm.cs" />
+    <Compile Include="ForestWorld\Actuators\Gun.cs" />
+    <Compile Include="ForestWorld\Actuators\PlantAnalyzer.cs" />
+    <Compile Include="ForestWorld\Actuators\WaterTank.cs" />
+    <Compile Include="ForestWorld\Actuators\Wheels.cs" />
+    <Compile Include="ForestWorld\AgentDispatchMediator.cs" />
+    <Compile Include="ForestWorld\Entities\AnimalFeeder.cs" />
+    <Compile Include="ForestWorld\Entities\Fungus.cs" />
+    <Compile Include="ForestWorld\Entities\GreenPlant.cs" />
+    <Compile Include="ForestWorld\ForestWorldLogicProvider.cs" />
+    <Compile Include="ForestWorld\GroundTileDispatchMediator.cs" />
+    <Compile Include="ForestWorld\Sensors\Barometer.cs" />
+    <Compile Include="ForestWorld\Sensors\Accumulator.cs" />
+    <Compile Include="ForestWorld\Sensors\BrightnessSensor.cs" />
+    <Compile Include="ForestWorld\Sensors\Camera.cs" />
+    <Compile Include="ForestWorld\Sensors\Clock.cs" />
+    <Compile Include="ForestWorld\Sensors\HumiditySensor.cs" />
+    <Compile Include="ForestWorld\Sensors\Postmortem.cs" />
+    <Compile Include="ManualClient\ManualClient.cs" />
+    <Compile Include="Network\DataCollection.cs" />
+    <Compile Include="Network\NetworkClient.cs" />
+    <Compile Include="Network\Marshallers.cs" />
+    <Compile Include="Network\Message.cs" />
+    <Compile Include="Network\NetworkServer.cs" />
+    <Compile Include="Simulation\Actuator.cs" />
+    <Compile Include="Simulation\Agent.cs" />
+    <Compile Include="Simulation\GroundTileFactory.cs" />
+    <Compile Include="Simulation\InanimateObject.cs" />
+    <Compile Include="Simulation\ISimulationContentProvider.cs" />
+    <Compile Include="Simulation\MessageBroadcaster.cs" />
+    <Compile Include="Simulation\MessageFormats.cs" />
+    <Compile Include="Simulation\NamedObject.cs" />
+    <Compile Include="Simulation\Sensor.cs" />
+    <Compile Include="Simulation\ServerSettings.cs" />
+    <Compile Include="Simulation\ServiceMediator.cs" />
+    <Compile Include="Simulation\SimulationCore.cs" />
+    <Compile Include="Simulation\UserAgent.cs" />
+    <Compile Include="ForestWorld\Entities\Animal.cs" />
+    <Compile Include="Definitions.cs" />
+    <Compile Include="Enums.cs" />
+    <Compile Include="Simulation\Grid.cs" />
+    <Compile Include="Simulation\GroundTile.cs" />
+    <Compile Include="Simulation\Hex.cs" />
+    <Compile Include="Logger.cs" />
+    <Compile Include="Simulation\MarkovModel.cs" />
+    <Compile Include="ForestWorld\Entities\Plant.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="VacuumBot\Actuators.cs" />
+    <Compile Include="VacuumBot\VacuumBotClient.cs" />
+    <Compile Include="VacuumBot\Sensors.cs" />
+    <Compile Include="VacuumBot\VacuumBotContentProvider.cs" />
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <None Include="app.config" />
+    <None Include="Diagrams\Extensibility.cd" />
+    <None Include="ForestWorld\Data\tile_definitions.json" />
+    <None Include="ForestWorld\Data\weatherModel.json" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Simulation\ISimulationObject.cs" />
+    <Compile Include="Simulation\TimedEventQueue.cs" />
+    <Compile Include="Simulation\World.cs" />
+    <Compile Include="Simulation\WorldSettings.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Documents\Design.txt" />
+    <Content Include="Documents\JSON.NET license.txt" />
+    <Content Include="Documents\Notes.txt" />
+    <Content Include="Tools\map_transform.py" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.2.0">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 2.0 %28x86%29</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.0">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.0 %28x86%29</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Windows.Installer.3.1">
+      <Visible>False</Visible>
+      <ProductName>Windows Installer 3.1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

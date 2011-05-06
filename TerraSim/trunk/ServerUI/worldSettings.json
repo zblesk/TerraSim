@@ -1,0 +1,10 @@
+{
+  "WeatherEnabled": true,
+  "DayNightEnabled": true,
+  "BarometricPressure": 70,
+  "Dawn": 25,
+  "Dusk": 75,
+  "LightFadeSpan": 10,
+  "WeatherStateTransitionsPerDay": 20,
+  "DayPartCount": 100
+}

@@ -1,0 +1,8 @@
+{
+"name" : "ForestWorld 1",
+"factoryFileName" : "tiledefs.json",
+"weatherModelFileName" : "weatherModel.json",
+"worldSettings" : "worldSettings.json",
+"tiles" : [["grass", "grass", "grass", "grass", "grass", "grass", "grass", "grass", "grass", "grove", "grove", "water", "water"], ["grass", "water", "water", "grass", "grove", "grass", "water", "water", "water", "grove", "grove", "water", "water"], ["grass", "gravel", "rock", "rock", "water", "grass", "grass", "water", "grass", "grove", "grove", "water", "water"], ["grass", "gravel", "rock", "rock", "rock", "rock", "gravel", "grass", "grass", "grove", "grove", "water", "water"], ["grass", "gravel", "gravel", "rock", "rock", "rock", "gravel", "grass", "grass", "grass", "grass", "water", "water"], ["grove", "grass", "gravel", "gravel", "rock", "rock", "gravel", "grass", "grass", "grass", "water", "water", "grass"], ["grove", "grass", "grass", "gravel", "gravel", "gravel", "gravel", "gravel", "water", "water", "water", "grass", "water"], ["grove", "grass", "grass", "grass", "water", "water", "water", "gravel", "grass", "water", "grass", "grass", "grass"], ["grove", "grove", "grass", "grass", "grass", "water", "grass", "grass", "grass", "water", "grass", "grass", "grass"], ["grove", "grove", "grass", "grass", "grass", "grass", "grass", "grass", "gravel", "water", "gravel", "grass", "grass"], ["grove", "grove", "grass", "grass", "grass", "grass", "gravel", "gravel", "water", "water", "gravel", "grass", "grass"], ["grove", "grove", "grove", "grass", "grass", "grass", "gravel", "water", "water", "water", "gravel", "grass", "grass"], ["grove", "grove", "grove", "grove", "grass", "grass", "gravel", "water", "water", "water", "gravel", "grass", "grass"]],
+"items" : [],
+}
