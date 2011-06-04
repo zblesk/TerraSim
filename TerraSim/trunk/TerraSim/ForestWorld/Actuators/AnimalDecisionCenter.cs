@@ -51,7 +51,9 @@ namespace TerraSim.ForestWorld.Actuators
             // try to find some food.
             var r = new Random();
             timeSinceLastFood++;
-            if (timeSinceLastFood > eatingInterval)
+            var fed = false;
+            var wantsFood = timeSinceLastFood > eatingInterval;
+            if (wantsFood)
             {
                 var surroundings = from hex in args.World.Map.EnumerateNeighbours(
                                        Owner.PositionX, Owner.PositionY, Animal.SightRange)
@@ -67,6 +69,7 @@ namespace TerraSim.ForestWorld.Actuators
                     {
                         eating = true;
                         timeRemaining = 1;
+                        fed = true;
                     }
                     else
                     {
@@ -81,7 +84,7 @@ namespace TerraSim.ForestWorld.Actuators
                     }
                 }
             }
-            else //not feeding; move in a random direction.
+            if (!wantsFood || !fed) //not feeding; move in a random direction.
             {
                 var neighb = args.World.Map.EnumerateNeighbours(Owner.PositionX,
                     Owner.PositionY, 1).ToArray();
