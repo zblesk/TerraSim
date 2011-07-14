@@ -95,6 +95,7 @@
     <Compile Include="ForestWorld\Entities\AnimalFeeder.cs" />
     <Compile Include="ForestWorld\Entities\Fungus.cs" />
     <Compile Include="ForestWorld\Entities\GreenPlant.cs" />
+    <Compile Include="ForestWorld\ForestEntityFactory.cs" />
     <Compile Include="ForestWorld\ForestWorldLogicProvider.cs" />
     <Compile Include="ForestWorld\GroundTileDispatchMediator.cs" />
     <Compile Include="ForestWorld\Sensors\Barometer.cs" />

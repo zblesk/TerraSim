@@ -14,10 +14,10 @@ using TerraSim.Simulation;
 
 namespace ManualClientConsole
 {
+    using TerraSim.Network;
     using EntityData = Dictionary<string, string>;
     //A node contains a TreViewItem and its entity data.
-    using Node = Tuple<TreeViewItem, Dictionary<string, string>>;
-    using TerraSim.Network; 
+    using Node = Tuple<TreeViewItem, Dictionary<string, string>>; 
 
     /// <summary>
     /// Interaction logic for MainWindow.xaml
@@ -93,6 +93,7 @@ namespace ManualClientConsole
             cbCommand.Dispatcher.Invoke(new Action(() =>
                 {
                     cbCommand.Items.Clear();
+                    cbCommand.Items.Add("tell");
                     foreach (var it in items)
                     {
                         cbCommand.Items.Add(it);
