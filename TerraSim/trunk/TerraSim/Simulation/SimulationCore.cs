@@ -33,6 +33,7 @@ namespace TerraSim.Simulation
         private const int second = 1000;
         private const int minute = 60 * second;
         private const int minimumRequiredTimeUnitDuration = 100; //in miliseconds
+        private const string tellCommandString = "tell";
 
         public ServerSettings Settings { get; private set; }
 
@@ -66,8 +67,6 @@ namespace TerraSim.Simulation
         {
             //Not needed for now; handles regular timer cleanup.
             //timeQueue.Enqueue(() => { timeQueue.Purge(); }, 5 * minute, true);
-            timer = new Stopwatch();
-            lastTimeChange = 0;
         }
 
         /// <summary>
@@ -76,6 +75,8 @@ namespace TerraSim.Simulation
         public void Start(ServerSettings settings, World world)
         {
             started = DateTime.Now;
+            timer = new Stopwatch();
+            lastTimeChange = 0;
             IsRunning = true;
             lastUpdate = 0;
             networkCore = new NetworkServer(settings.NetworkPort == -1 
@@ -110,6 +111,7 @@ the day duration. (Currently {2} seconds.)"
             {
                 Trace.TraceWarning(
                     "Simulation core is being stopped, though it was never started.");
+                return;
             }
             IsRunning = false;
             timer.Stop();
@@ -208,7 +210,15 @@ the day duration. (Currently {2} seconds.)"
                 try
                 {
                     c.ActionName = c.ActionName.ToLowerInvariant();
-                    world.EnqueueAgentCommand(clientId, c);
+                    if (c.ActionName == tellCommandString) //the special case of Tell action
+                    {
+                        int targetAgentId = (world.GetObjectByName(c.Arg1) as UserAgent).Id;                        
+                        world.EnqueueAgentCommand(targetAgentId, c);
+                    }
+                    else
+                    {
+                        world.EnqueueAgentCommand(clientId, c);
+                    }
                 }
                 catch (NullReferenceException) { }
             }

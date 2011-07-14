@@ -78,8 +78,8 @@ namespace TerraSim.ForestWorld.Actuators
                         Mediator.ExecuteAfterUpdate(() =>
                         {
                             args.World.MoveObject(Owner,
-                                Owner.PositionX + dx / Math.Abs(dx) == 0 ? 1 : Math.Abs(dx),
-                                Owner.PositionY + dy / Math.Abs(dy) == 0 ? 1 : Math.Abs(dy));
+                                Owner.PositionX + dx / (Math.Abs(dx) == 0 ? 1 : Math.Abs(dx)),
+                                Owner.PositionY + dy / (Math.Abs(dy) == 0 ? 1 : Math.Abs(dy)));
                         });
                     }
                 }
