@@ -137,7 +137,9 @@
     </None>
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="images\agent.PNG" />
+    <Resource Include="images\agent.PNG">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

@@ -64,6 +64,12 @@ namespace ServerUI
                 tbPort.Text = settings.NetworkPort.ToString();
                 tbDayLength.Text = settings.DayCycleLength.ToString();
             }
+            var startupMap = (Application.Current as App).AutostartMap;
+            if (startupMap != null) 
+            {
+                LoadMap(startupMap);
+                btnStart_Click(this, new RoutedEventArgs());
+            }
         }
 
         private void btnStart_Click(object sender, RoutedEventArgs e)
@@ -93,15 +99,20 @@ namespace ServerUI
             bool? result = dialog.ShowDialog();
             if (result == true)
             {
-                ForestWorldLogicProvider logicProvider = new ForestWorldLogicProvider();
-                using (var map = new FileStream(dialog.FileName, FileMode.Open, FileAccess.Read))
-                {
-                    string name;
-                    world = logicProvider.LoadMap(map, out name);
-                    tbMapName.Text = name;
-                }
-                btnStart.IsEnabled = true;
+                LoadMap(dialog.FileName);
             }
+        }
+
+        private void LoadMap(string fileName)
+        {
+            ForestWorldLogicProvider logicProvider = new ForestWorldLogicProvider();
+            using (var map = new FileStream(fileName, FileMode.Open, FileAccess.Read))
+            {
+                string name;
+                world = logicProvider.LoadMap(map, out name);
+                tbMapName.Text = name;
+            }
+            btnStart.IsEnabled = true;
         }
 
         private void Window_Closing(object sender, System.ComponentModel.CancelEventArgs e)

@@ -14,9 +14,8 @@ namespace TerraSim.Simulation
         private NetworkServer networkCore = null;
         private World world;
         private DateTime started;
-        private TimedEventQueue timeQueue = new TimedEventQueue();
-        private Queue<Tuple<int, SimulationCore.RequestedDataType>> dataRequestQueue
-            = new Queue<Tuple<int, RequestedDataType>>();
+        private TimedEventQueue timeQueue = null;
+        private Queue<Tuple<int, SimulationCore.RequestedDataType>> dataRequestQueue = null;
         private bool updateRunning = false;
         /// <summary>
         /// When was the last time the day part changed.
@@ -76,6 +75,7 @@ namespace TerraSim.Simulation
         {
             started = DateTime.Now;
             timer = new Stopwatch();
+            dataRequestQueue = new Queue<Tuple<int, RequestedDataType>>();
             lastTimeChange = 0;
             IsRunning = true;
             lastUpdate = 0;
@@ -94,6 +94,7 @@ the day duration. (Currently {2} seconds.)"
             Settings = settings;
             world.AfterUpdate += WorldUpdated;
             timer.Start();
+            timeQueue = new TimedEventQueue();
             EnqueueEvent(UpdateWorld, timeUnitDuration, true);
             timeQueue.Start();
             networkCore.Start();

@@ -16,7 +16,7 @@
                     <ColumnDefinition Width="66*" />
                 </Grid.ColumnDefinitions>
                 <Label Content="Day cycle length" Height="28" Margin="14,6,0,0" Name="label3" VerticalAlignment="Top" HorizontalAlignment="Left" Width="108" Grid.ColumnSpan="2" />
-                <TextBox Height="23" HorizontalAlignment="Right" Margin="0,36,54,0" Name="tbDayLength" VerticalAlignment="Top" Width="120" Grid.ColumnSpan="3" ToolTip="Length of one day in simulation (minutes)" />
+                <TextBox Height="23" HorizontalAlignment="Right" Margin="0,36,54,0" Name="tbDayLength" VerticalAlignment="Top" Width="120" Grid.ColumnSpan="3" ToolTip="Length of one day in simulation (minutes)" Text="2" />
                 <TextBox Height="23" HorizontalAlignment="Left" Margin="15,96,0,0" Name="tbPort" VerticalAlignment="Top" Width="119" Grid.ColumnSpan="3" />
                 <Label Content="Port" Height="28" HorizontalAlignment="Left" Margin="15,62,0,0" Name="label1" VerticalAlignment="Top" />
             </Grid>
