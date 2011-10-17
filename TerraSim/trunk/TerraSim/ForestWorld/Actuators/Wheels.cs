@@ -31,6 +31,10 @@ namespace TerraSim.ForestWorld.Actuators
         /// Determines how much enery will each action cost.
         /// </summary>
         private int actionPrice = 5;
+        /// <summary>
+        /// How many directions do the wheels recognize?
+        /// </summary>
+        private const int directionCount = 6;
         #region Stats
         private bool sendStats = false;
         private int turnCount = 0;
@@ -44,7 +48,7 @@ namespace TerraSim.ForestWorld.Actuators
         private int CurrentHeading
         {
             get { return _curHeading; }
-            set { _curHeading = value.Bound(0, 5); }
+            set { _curHeading = (value + directionCount) % directionCount; }
         }
 
         public Wheels(UserAgent owner, ServiceMediator sm) : base(owner, sm) { }
