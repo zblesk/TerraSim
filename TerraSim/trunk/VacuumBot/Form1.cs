@@ -59,7 +59,7 @@ namespace VacuumBot
 
         private void LoadImages()
         {
-            string[] names = new[] { "agent", "clean", "dirt", "wall" };
+            string[] names = new[] { "user_agent", "clean", "dirt", "wall" };
             foreach (var name in names)
             {
                 sprites[name] = new Bitmap(string.Format(@"img\{0}.gif", name));

@@ -227,7 +227,7 @@ the day duration. (Currently {2} seconds.)"
 
         private void HandleNewClient(object sender, int clientId)
         {
-            if (networkCore.ClientCount < world.MaxClients)
+            if (networkCore.ClientCount <= world.MaxClients)
             {
                 world.AddAgent(clientId);
                 dataRequestQueue.Enqueue(
