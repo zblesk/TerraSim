@@ -1,0 +1,9 @@
+# TerraSim thesis - A Simulated Environment for Learning Agents
+
+This thesis details the design and implementation-related decisions in TerraSim. It is only available in Slovak language. 
+
+## Abstract (EN):
+Our goal was to design an environment the agent can explore, reason about, categorize various objects it encounters and observe results of its actions. The simulation itself is implemented as a module for TerraSim – our solution working as a network server, allowing remote control of agents. Single- as well as multi-agent scenarios are supported. The modular architecture of TerraSim enables us to easily define multiple different scenarios with new sets of sensors, actuators or even whole worlds, making its potential uses quite broad. We also provide usage examples, an application for controlling the agent in any kind of simulation and a visualization application.
+
+## Abstrakt (SK):
+V práci realizujeme simulovaný svet, ktorý môţe inteligentný agent skúmať, usudzovať o jeho vlastnostiach, kategorizovať objekty, na ktoré naráţa a pozorovať výsledky svojich akcií. Simulácia je realizovaná ako modul do TerraSim – nášho sieťového servera, na ktorý sa pripájajú klienti aby inštruovali agentov. Podporované sú jedno- aj multiagentové scenáre. Dbáme na jednoduché pouţitie z uţívateľského aj z programátorského hľadiska: modulárna architektúra umoţňuje jednoduché definovanie nových senzorov, aktuátorov alebo celých svetov, preto jeho vyuţitie nie je obmedzené iba na jeden účel. Uvádzame príklady pouţitia a prikladáme aplikáciu na manuálne ovládanie ľubovoľného druhu simulácie a vizualizáciu vnemov agenta.
